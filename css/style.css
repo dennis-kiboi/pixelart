@@ -3,8 +3,46 @@
 * {
   font-family: 'Raleway', sans-serif;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-div.container {
+div.container-fluid {
   background-color: #070807;
+  min-height: 100vh;
+}
+
+header {
+  border-bottom: 3px solid #3C4741;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo h1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+#logo h1 span {
+  color: #5FC289;
+  font-weight: 400;
+}
+
+input#search {
+  width: 360px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 30px;
+  background: #3C4741;
+  border: none;
+}
+
+input#search::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 24px;
+  font-weight: 500;
 }
