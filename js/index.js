@@ -3,7 +3,7 @@ const galleryDiv = document.getElementById('row');
 
 function renderImage(imageData) {
   let image = document.createElement('div');
-  image.className = 'col-lg-4 col-md-6 col-6'
+  image.className = 'col-lg-4 col-md-6 col-6 mb-4'
   image.innerHTML = `
     <div class="card">
       <img src=${imageData.urls.small} alt="">
@@ -14,10 +14,20 @@ function renderImage(imageData) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM fully loaded and parsed');
+  
   fetch(unsplashAPI)
   .then(res => res.json())
   .then(data => {
-    data.forEach(imageData => renderImage(imageData))
+    data.forEach(imageData => renderImage(imageData));
+    
+    const masonry = new Masonry(galleryDiv, {
+      percentPosition: true
+    });
+
+    imagesLoaded(galleryDiv).on( 'progress', function() {
+      // layout Masonry after each image loads
+      masonry.layout();
+    });
   });
+
 });

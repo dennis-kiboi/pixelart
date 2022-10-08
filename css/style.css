@@ -9,7 +9,7 @@
 
 div.container-fluid {
   background-color: #070807;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 header {
