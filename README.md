@@ -16,7 +16,7 @@ This is photo gallery website, built using HTML, CSS and Vanilla JavaScript, whe
 Ensure that your device of choice has a browser installed.
 Click the link provided below to view the site.
 
-https://mururi.github.io/pixelart/
+https://dennis-kiboi.github.io/pixelart/
 
 ### Using the App
 The user can navigate the web app easily and be able to:
